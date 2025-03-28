@@ -1,5 +1,6 @@
 /* Opći stilovi */
 body {
+  width: 100%;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body {
 
 /* Header i navigacija */
 header {
+  width: 100%;
   background: #222;
   color: white;
   padding: 20px;
@@ -16,7 +18,7 @@ header {
 
 .navbar {
   padding: 20px 20px 0 0;
- width: 100px;
+  width: 100px;
   position: relative;
   display: flex;
   font-family: Arial, sans-serif;
