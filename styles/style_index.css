@@ -108,21 +108,31 @@ header {
 
 .content-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  flex-wrap: wrap; /* dopušta da se elementi prelamaju ispod ako nema mjesta */
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 1rem;
+  gap: 1rem;
 }
 
-/* Slika unutar aside-a */
+.content-wrapper table {
+  overflow-x: auto;
+  display: block;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
 .weather-aside {
-  text-align: center;
+  flex-shrink: 0;
+  max-width: 100%;
 }
 
-.aside-image {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.weather-picture img,
+.weather-picture source {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Na širim ekranima slika ide desno od tablice */
@@ -256,6 +266,7 @@ footer {
   padding: 10px;
   background: #222;
   color: white;
+  width: 100%;
 }
 
 /* Responzivnost */
